@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Citas IA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- React Big Calendar CSS -->
+    <link rel="stylesheet" href="https://aistudiocdn.com/react-big-calendar@^1.19.4/lib/css/react-big-calendar.css">
+    
+    <!-- Custom Styles & Tailwind Config -->
+    <style>
+        /* Custom properties for the new indigo theme */
+        :root {
+            --color-primary-50: #eef2ff;
+            --color-primary-100: #e0e7ff;
+            --color-primary-200: #c7d2fe;
+            --color-primary-300: #a5b4fc;
+            --color-primary-400: #818cf8;
+            --color-primary-500: #6366f1;
+            --color-primary-600: #4f46e5;
+            --color-primary-700: #4338ca;
+            --color-primary-800: #3730a3;
+            --color-primary-900: #312e81;
+            --color-primary-950: #1e1b4b;
+        }
+
+        /* Animations */
+        @keyframes scale-in {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .animate-scale-in {
+            animation: scale-in 0.3s ease-out forwards;
+        }
+
+        @keyframes fade-in-up {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.5s ease-out forwards;
+        }
+    </style>
+    <script>
+    // Custom Tailwind theme configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: 'var(--color-primary-50)',
+              100: 'var(--color-primary-100)',
+              200: 'var(--color-primary-200)',
+              300: 'var(--color-primary-300)',
+              400: 'var(--color-primary-400)',
+              500: 'var(--color-primary-500)',
+              600: 'var(--color-primary-600)',
+              700: 'var(--color-primary-700)',
+              800: 'var(--color-primary-800)',
+              900: 'var(--color-primary-900)',
+              950: 'var(--color-primary-950)',
+            },
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Import Map for ES Modules -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0",
+        "react-big-calendar/": "https://aistudiocdn.com/react-big-calendar@^1.19.4/",
+        "react-big-calendar": "https://aistudiocdn.com/react-big-calendar@^1.19.4",
+        "moment/": "https://aistudiocdn.com/moment@^2.30.1/",
+        "moment": "https://aistudiocdn.com/moment@^2.30.1"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

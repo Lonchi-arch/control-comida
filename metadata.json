@@ -1,0 +1,7 @@
+{
+  "name": "Gestor de Citas IA",
+  "description": "Una aplicación inteligente para gestionar clientes y reservas usando IA para agendar citas automáticamente a partir de texto o voz. Configure sus horarios disponibles y deje que la IA organice su agenda.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
